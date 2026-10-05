@@ -298,8 +298,7 @@ function Footer() {
         <span className="flex items-center gap-2 text-white/70">
           <Hex state="idle" size={18} /> NotchPal
         </span>
-        <span className="sm:ml-auto">Source-available. Free to download and use.</span>
-        <span>Not affiliated with Anthropic.</span>
+        <span className="sm:ml-auto">© {new Date().getFullYear()} NotchPal</span>
       </div>
     </footer>
   );
