@@ -235,7 +235,7 @@ function Install() {
   ];
   return (
     <section id="install" className="px-4 py-32 md:py-44">
-      <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[1fr_1.3fr]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
         <Reveal>
           <h2 className="text-balance text-[clamp(2rem,4vw,3.4rem)] font-semibold leading-[1.05] tracking-[-0.03em]">
             Up and running in a minute.
