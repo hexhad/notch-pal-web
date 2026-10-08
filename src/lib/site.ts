@@ -1,9 +1,15 @@
 export const release = {
-  version: "0.2.1",
-  dmg: "/downloads/NotchPal-0.2.1.dmg",
+  version: "0.3.1",
+  dmg: "/downloads/NotchPal-0.3.1.dmg",
   size: "1.4 MB",
-  sha256: "adfdd308490987428333f5dcfda81b742b96d66f1cd3a6b42159b847d9755f60",
+  sha256: "75e1ee972146783d2e868799839023995176e8aba8f9325e7adfb2336350921c",
   minOS: "macOS 13",
+};
+
+/** The Android companion app. */
+export const android = {
+  repo: "https://github.com/hexhad/notch-pal-android",
+  minOS: "Android 10",
 };
 
 export type BotState =

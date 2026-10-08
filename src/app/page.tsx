@@ -2,8 +2,9 @@ import { CopyCommand, Reveal } from "@/components/Bits";
 import { CountHex, Hex, UsageHex } from "@/components/Hex";
 import { LiquidGlass } from "@/components/LiquidGlass";
 import { NotchDemo } from "@/components/NotchDemo";
+import { PhoneDemo } from "@/components/PhoneDemo";
 import { HeroGradient, LiquidHex } from "@/components/Visuals";
-import { release, states } from "@/lib/site";
+import { android, release, states } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <States />
       <Features />
+      <Phone />
       <Install />
       <FinalCTA />
       <Footer />
@@ -56,6 +58,9 @@ function Nav() {
           </a>
           <a href="#features" className="rounded-full px-3 py-1.5 transition-colors duration-200 hover:text-white">
             Features
+          </a>
+          <a href="#phone" className="rounded-full px-3 py-1.5 transition-colors duration-200 hover:text-white">
+            Phone
           </a>
           <a href="#install" className="rounded-full px-3 py-1.5 transition-colors duration-200 hover:text-white">
             Install
@@ -212,6 +217,61 @@ function Features() {
             </pre>
           </Card>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Phone() {
+  const points = [
+    { state: "approval" as const, title: "Allow or deny from anywhere", body: "Permission requests show the command or file, with Allow, Deny and Always allow. The same buttons sit right on the notification." },
+    { state: "question" as const, title: "Every session, by its task", body: "See what each session is working on and doing right now. Get alerts for questions, errors, finished turns and a low plan." },
+    { state: "working" as const, title: "Pairs with one scan", body: "Turn on Connect phone over Wi\u2011Fi in the menu, scan the QR code, done. Nothing leaves your network." },
+  ];
+  return (
+    <section id="phone" className="px-4 py-32 md:py-44">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+        <div>
+          <Reveal>
+            <h2 className="max-w-xl text-balance text-[clamp(2rem,4vw,3.4rem)] font-semibold leading-[1.05] tracking-[-0.03em]">
+              Step away. Claude can still reach you.
+            </h2>
+            <p className="mt-5 max-w-md text-white/55">
+              The NotchPal Android app follows every session on your Mac over your Wi&#8209;Fi, and lets you answer when one
+              needs you.
+            </p>
+          </Reveal>
+          <ul className="mt-12 flex flex-col gap-7">
+            {points.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.08}>
+                <li className="flex gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-black ring-1 ring-white/[0.07]">
+                    <Hex state={p.state} size={26} />
+                  </span>
+                  <span>
+                    <span className="block font-medium">{p.title}</span>
+                    <span className="mt-1 block max-w-md text-sm leading-relaxed text-white/55">{p.body}</span>
+                  </span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+          <Reveal delay={0.2} className="mt-12">
+            <a
+              href={android.repo}
+              className="press inline-flex items-center gap-2 rounded-full bg-white/[0.07] px-5 py-2.5 text-sm font-medium text-white ring-1 ring-white/10 transition-colors duration-200 hover:bg-white/[0.11]"
+            >
+              Get the Android app
+              <svg viewBox="0 0 16 16" className="size-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M5 11 11 5M6 5h5v5" />
+              </svg>
+            </a>
+            <p className="mt-3 text-[13px] text-white/40">{android.minOS} or later. Needs NotchPal 0.3 on your Mac.</p>
+          </Reveal>
+        </div>
+        <Reveal delay={0.1}>
+          <PhoneDemo />
+        </Reveal>
       </div>
     </section>
   );
