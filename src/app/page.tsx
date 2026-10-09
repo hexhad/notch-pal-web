@@ -358,7 +358,10 @@ function Footer() {
         <span className="flex items-center gap-2 text-white/70">
           <Hex state="idle" size={18} /> NotchPal
         </span>
-        <span className="sm:ml-auto">© {new Date().getFullYear()} NotchPal</span>
+        <a href="/privacy" className="transition-colors duration-200 hover:text-white sm:ml-auto">
+          Privacy
+        </a>
+        <span>© {new Date().getFullYear()} NotchPal</span>
       </div>
     </footer>
   );
