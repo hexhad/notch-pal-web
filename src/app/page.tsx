@@ -26,7 +26,7 @@ function DownloadButton({ size = "lg" }: { size?: "lg" | "md" }) {
     <a
       href={release.dmg}
       download
-      className={`press group inline-flex items-center gap-3 rounded-full bg-white font-medium text-black transition-[background-color,transform] duration-200 hover:bg-white/90 ${
+      className={`press group inline-flex shrink-0 items-center gap-3 whitespace-nowrap rounded-full bg-white font-medium text-black transition-[background-color,transform] duration-200 hover:bg-white/90 ${
         size === "lg" ? "py-2 pl-6 pr-2 text-[15px]" : "py-1.5 pl-4 pr-1.5 text-sm"
       }`}
     >
@@ -52,7 +52,7 @@ function Nav() {
           <Hex state="idle" size={20} />
           NotchPal
         </a>
-        <nav className="ml-auto hidden items-center gap-1 text-[13px] text-white/60 sm:flex">
+        <nav className="ml-auto hidden items-center gap-1 text-[13px] text-white/60 md:flex">
           <a href="#states" className="rounded-full px-3 py-1.5 transition-colors duration-200 hover:text-white">
             States
           </a>
@@ -66,7 +66,7 @@ function Nav() {
             Install
           </a>
         </nav>
-        <div className="ml-auto sm:ml-1">
+        <div className="ml-auto shrink-0 md:ml-1">
           <DownloadButton size="md" />
         </div>
       </LiquidGlass>
