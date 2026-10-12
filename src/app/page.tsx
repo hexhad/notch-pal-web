@@ -226,6 +226,7 @@ function Features() {
 function Phone() {
   const points = [
     { state: "approval" as const, title: "Allow or deny from anywhere", body: "Permission requests show the command or file, with Allow, Deny and Always allow. The same buttons sit right on the notification." },
+    { state: "thinking" as const, title: "Send the next prompt", body: "Type a message to a running session and Claude picks it up the moment its turn ends. Or start a new session in any of your projects." },
     { state: "question" as const, title: "Every session, by its task", body: "See what each session is working on and doing right now. Get alerts for questions, errors, finished turns and a low plan." },
     { state: "working" as const, title: "Pairs with one scan", body: "Turn on Connect phone over Wi\u2011Fi in the menu, scan the QR code, done. Nothing leaves your network." },
   ];
@@ -238,8 +239,8 @@ function Phone() {
               Step away. Claude can still reach you.
             </h2>
             <p className="mt-5 max-w-md text-white/55">
-              The NotchPal Android app follows every session on your Mac over your Wi&#8209;Fi, and lets you answer when one
-              needs you.
+              The NotchPal Android app follows every session on your Mac over your Wi&#8209;Fi, lets you answer when one
+              needs you, and keeps Claude going while you&rsquo;re away.
             </p>
           </Reveal>
           <ul className="mt-12 flex flex-col gap-7">
@@ -267,7 +268,7 @@ function Phone() {
                 <path d="M5 11 11 5M6 5h5v5" />
               </svg>
             </a>
-            <p className="mt-3 text-[13px] text-white/40">{android.minOS} or later. Needs NotchPal 0.3 on your Mac.</p>
+            <p className="mt-3 text-[13px] text-white/40">{android.minOS} or later. Needs NotchPal 0.3 on your Mac, or 0.3.4 to send prompts.</p>
           </Reveal>
         </div>
         <Reveal delay={0.1}>
