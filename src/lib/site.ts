@@ -8,7 +8,8 @@ export const release = {
 
 /** The Android companion app. */
 export const android = {
-  repo: "https://github.com/hexhad/notch-pal-android",
+  play: "https://play.google.com/store/apps/details?id=com.hexhad.notchpal",
+  contact: "hexhad@gmail.com",
   minOS: "Android 10",
 };
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const effective = "9 October 2026";
+const effective = "13 October 2026";
 
 export default function Privacy() {
   return (
@@ -153,8 +153,8 @@ export default function Privacy() {
 
         <Section title="Contact">
           <p>
-            Questions about this policy can be raised as an issue at{" "}
-            <ExternalLink href={`${android.repo}/issues`}>{android.repo.replace("https://", "")}/issues</ExternalLink>.
+            Questions about this policy can be sent to{" "}
+            <ExternalLink href={`mailto:${android.contact}`}>{android.contact}</ExternalLink>.
           </p>
         </Section>
       </article>

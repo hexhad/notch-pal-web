@@ -260,15 +260,17 @@ function Phone() {
           </ul>
           <Reveal delay={0.2} className="mt-12">
             <a
-              href={android.repo}
+              href={android.play}
+              target="_blank"
+              rel="noopener"
               className="press inline-flex items-center gap-2 rounded-full bg-white/[0.07] px-5 py-2.5 text-sm font-medium text-white ring-1 ring-white/10 transition-colors duration-200 hover:bg-white/[0.11]"
             >
-              Get the Android app
-              <svg viewBox="0 0 16 16" className="size-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <path d="M5 11 11 5M6 5h5v5" />
+              <svg viewBox="0 0 16 16" className="size-3.5" fill="currentColor" aria-hidden>
+                <path d="M3.2 1.6a1 1 0 0 1 1.02-.02l9.3 5.55a1 1 0 0 1 0 1.73l-9.3 5.55A1 1 0 0 1 2.7 13.55V2.45a1 1 0 0 1 .5-.85Z" />
               </svg>
+              Get it on Google Play
             </a>
-            <p className="mt-3 text-[13px] text-white/40">{android.minOS} or later. Needs NotchPal 0.3 on your Mac, or 0.3.4 to send prompts.</p>
+            <p className="mt-3 text-[13px] text-white/40">Free. {android.minOS} or later. Needs NotchPal 0.3 on your Mac, or 0.3.4 to send prompts.</p>
           </Reveal>
         </div>
         <Reveal delay={0.1}>
