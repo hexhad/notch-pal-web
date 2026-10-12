@@ -1,5 +1,6 @@
 import { CopyCommand, Reveal } from "@/components/Bits";
 import { CountHex, Hex, UsageHex } from "@/components/Hex";
+import { MadeByHexhad } from "@/components/Hexhad";
 import { LiquidGlass } from "@/components/LiquidGlass";
 import { NotchDemo } from "@/components/NotchDemo";
 import { PhoneDemo } from "@/components/PhoneDemo";
@@ -358,10 +359,11 @@ function Footer() {
         <span className="flex items-center gap-2 text-white/70">
           <Hex state="idle" size={18} /> NotchPal
         </span>
+        <MadeByHexhad />
         <a href="/privacy" className="transition-colors duration-200 hover:text-white sm:ml-auto">
           Privacy
         </a>
-        <span>© {new Date().getFullYear()} NotchPal</span>
+        <span>© {new Date().getFullYear()} HEXHAD</span>
       </div>
     </footer>
   );

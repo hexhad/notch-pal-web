@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "NotchPal: Claude Code in your MacBook's notch",
   description:
     "A small animated hexagon beside your MacBook's camera notch that shows what your Claude Code sessions are doing. Click it to jump straight to the session.",
+  authors: [{ name: "HEXHAD", url: "https://hexhad.github.io" }],
+  creator: "HEXHAD",
+  publisher: "HEXHAD",
   openGraph: {
     title: "NotchPal",
     description: "Your Claude Code sessions, living in the notch.",
