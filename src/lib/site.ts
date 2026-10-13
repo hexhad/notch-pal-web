@@ -1,8 +1,8 @@
 export const release = {
-  version: "0.3.5",
-  dmg: "/downloads/NotchPal-0.3.5.dmg",
+  version: "0.3.6",
+  dmg: "/downloads/NotchPal-0.3.6.dmg",
   size: "1.8 MB",
-  sha256: "54ec05171d9605c12b8c1afaddda6c024e98586da9440e9c085f9e5735f74e96",
+  sha256: "23a47ec1322a9fa13d22c61e7e720ca9c77d9deb103e317a53e7ecf1051e66d9",
   minOS: "macOS 13",
 };
 
